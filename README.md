@@ -40,12 +40,13 @@ Make sure that the URL does not end with a `/`.
 
 ## Assignment Question: trade-offs
 
-I spent a good amount of time on the project trying to get the best possible result in the short time at hand. The focus was to get a working MVP with readable and easy-to-understand code. I tried to keep logic seperated from the UI and force Single Resposibility, as well as other SOLID principles, while not over-complicating the app.
-I am happy with the result, but if I had more time I would look at the following enhancements/improvements:
+A good amount of time was invested in the project with the main focus on getting the best possible result in a short amount of time. The focus was to get a working MVP with readable, easy-to-understand, and highly testable code. Logic was kept seperated as much as possible from the UI and SOLID principles like Single Resposibility were applied.
 
-- Error Handling and Edge Cases: While basic API error handling is implemented, the UI's error response system needs refinement. The application would benefit from more sophisticated error messaging and graceful handling of edge cases. Additional development time would allow for implementing comprehensive error states and recovery flows, ensuring a more robust user experience across all scenarios.
-- Localization/Internationalization: All text content is currently hardcoded within the source code, making it difficult to update or translate content without modifying the codebase directly. This approach lacks the flexibility needed for supporting multiple languages and maintaining content updates efficiently.
-- Dependency Injection: The current manual dependency management works adequately for the project's limited scope. However, as the application grows in complexity, implementing a dedicated dependency injection framework like GetIt or Provider would improve scalability, testability, and maintainability. This would provide better control over object lifecycles and simplify dependency management across the application.
-- Data Persistence: Currently, the application lacks state persistence, causing all data to be lost when the app is closed. This limitation is particularly significant for user appointments, which can only be retrieved through re-authentication. Implementing local storage would maintain user data between sessions, eliminating the need for frequent re-authentication and providing a more seamless user experience.
-- Code Readability: Further code reviews would enhance overall code clarity and maintainability. Additional refactoring would ensure the codebase is more intuitive and accessible to other developers, following established best practices and coding standards.
+While the result was satisfactory, with more time at hand, I would look at the following enhancements/improvements:
+
+- Error Handling and Edge Cases: While basic error handling is implemented, the UI's error response system needs refinement. The application would benefit from more sophisticated error messaging and graceful handling of edge cases.
+- Localization/Internationalization: All text content is currently hardcoded within the source code, making it difficult to update or translate content without modifying the codebase directly.
+- Dependency Injection: The current manual dependency management works adequately for the project's limited scope. However, as the application grows in complexity, implementing a dedicated dependency injection framework like GetIt or Provider would improve scalability, testability, and maintainability.
+- Data Persistence: Currently, the application lacks state persistence, causing all data to be lost when the app is closed. A better solution would be to persist data like the current booking locally.
+- Code Readability: Reviewing the code to make sure it is readable and understandable for others.
 - Testability: just like readability, the testability can be enhanced by improving the architecture the app and following principles to a better testable code.
